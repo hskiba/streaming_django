@@ -12,7 +12,7 @@ async def keepalive(q: asyncio.Queue):
 
 # primary is the main, long-running task that produces the data
 async def primary(q: asyncio.Queue):
-    await asyncio.sleep(5)
+    await asyncio.sleep(120)
     await q.put('{"some": "json"}')
 
 
